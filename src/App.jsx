@@ -3,6 +3,7 @@ import Home from './Home.jsx'
 import ClickSpark from './components/ClickSpark.jsx'
 import InkCursor from './components/InkCursor.jsx'
 import ResumeModal from './components/ResumeModal.jsx'
+import HelloLoader from './components/HelloLoader.jsx'
 
 // Top-level error boundary: a render-time crash must not leave a blank page with no feedback.
 class ErrorBoundary extends Component {
@@ -14,7 +15,6 @@ class ErrorBoundary extends Component {
 
 // Hash routes: '#/work/<slug>' opens a case study, '#/about' the about page, anything else is home.
 // Secondary routes load on demand
-const HelloLoader = lazy(() => import('./components/HelloLoader.jsx'))
 const CaseStudy = lazy(() => import('./CaseStudy.jsx'))
 const AboutPage = lazy(() => import('./AboutPage.jsx'))
 
@@ -77,7 +77,7 @@ export default function App() {
       <ClickSpark sparkColor="#c6ff3d" sparkSize={11} sparkRadius={22} sparkCount={9} duration={450}>
         <InkCursor />
         <ResumeModal />
-        {loading && <Suspense fallback={<div className="hello" aria-hidden="true" />}><HelloLoader onDone={() => setLoading(false)} /></Suspense>}
+        {loading && <HelloLoader onDone={() => setLoading(false)} />}
         <Suspense fallback={null}>
         {slug === 'about' ? (
           <AboutPage onBack={() => back('about')} />

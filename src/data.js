@@ -256,9 +256,9 @@ export const projects = [
 
 // Live sites shown as full-bleed screenshots in the "on the web" gallery.
 export const liveWork = [
-  { t: 'EventHub', d: 'Event discovery and ticketing platform', slug: 'eventhub', shot: '/projects/eventhub/eventhub-1.jpg' },
-  { t: 'Saarthi AI', d: 'AI-powered government benefits navigator', slug: 'saarthi-ai', note: notes.saarthi, shot: '/projects/saarthi/saarthi-1.png' },
-  { t: 'Atlas Travel AI', d: 'Intelligent travel itinerary planner', slug: 'atlas-travel-ai', shot: '/projects/atlas/atlas-1.png' },
+  { t: 'EventHub', d: 'Event discovery and ticketing platform', slug: 'eventhub', shot: '/projects/eventhub/eventhub-1.jpg', url: 'https://github.com/abhinav8377/event' },
+  { t: 'Saarthi AI', d: 'AI-powered government benefits navigator', slug: 'saarthi-ai', note: notes.saarthi, shot: '/projects/saarthi/saarthi-1.png', url: 'https://github.com/arnavvmehtaa718/Saarthi-AI' },
+  { t: 'Atlas Travel AI', d: 'Intelligent travel itinerary planner', slug: 'atlas-travel-ai', shot: '/projects/atlas/atlas-1.png', url: 'https://github.com/arnavvmehtaa718/Atlas-Travel-AI' },
   { t: 'Jarvis', d: 'AI personal assistant', slug: 'jarvis', shot: '/projects/jarvis/jarvis-1.png', url: 'https://github.com/arnavvmehtaa718/JARVIS-AI' },
   { t: 'OceanIQ', d: 'AI-Powered Maritime Procurement & Chartering Intelligence', slug: 'oceaniq', shot: '/projects/oceaniq/oceaniq-1.png', url: 'https://github.com/arnavvmehtaa718/OceanIQ' },
 ]
