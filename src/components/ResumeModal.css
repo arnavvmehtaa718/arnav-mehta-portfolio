@@ -1,0 +1,25 @@
+.resume { position: fixed; inset: 0; z-index: 600; display: grid; place-items: center; padding: clamp(.6rem, 3vh, 2rem); animation: vfade .4s var(--ease); }
+.resume__bg { position: absolute; inset: 0; background: rgba(5,5,5,.88); backdrop-filter: blur(14px); -webkit-backdrop-filter: blur(14px); cursor: zoom-out; }
+.resume__box { position: relative; display: flex; flex-direction: column; width: min(100%, 860px); max-height: 100%; border-radius: 18px; background: #101010; box-shadow: 0 0 0 1px var(--line), 0 40px 120px -20px rgba(0,0,0,.9); outline: none; animation: vrise .6s var(--ease); overflow: hidden; }
+.resume__bar { display: flex; align-items: center; justify-content: space-between; gap: 1rem; padding: .8rem .9rem .8rem 1.2rem; border-bottom: 1px solid var(--line); flex: none; }
+.resume__title { display: flex; flex-direction: column; line-height: 1.2; min-width: 0; }
+.resume__title .mono { font-size: .68rem; letter-spacing: .14em; text-transform: uppercase; color: var(--accent); }
+.resume__title b { font-size: 1rem; white-space: nowrap; }
+.resume__actions { display: flex; align-items: center; gap: .5rem; flex: none; }
+.resume__actions .btn { padding: .65rem 1.1rem; font-size: .82rem; }
+.resume__dl svg { flex: none; }
+.resume__x { font-size: 1.7rem; line-height: 1; width: 2.4rem; height: 2.4rem; border-radius: 50%; box-shadow: inset 0 0 0 1px var(--line); transition: background .3s, color .3s; }
+.resume__x:hover { background: var(--fg); color: #000; }
+.resume__scroll { overflow: auto; overscroll-behavior: contain; -webkit-overflow-scrolling: touch; padding: clamp(.6rem, 2vw, 1.4rem); background: #1a1a18; }
+.resume__page { display: block; width: 100%; height: auto; border-radius: 4px; background: #fff; box-shadow: 0 10px 40px -10px rgba(0,0,0,.7); }
+@media (max-width: 560px) {
+  .resume { padding: 0; }
+  .resume__box { border-radius: 0; height: 100%; }
+  .resume__open { display: none; }
+  .resume__bar { padding: .7rem .7rem .7rem 1rem; }
+  .resume__title b { font-size: .92rem; }
+  .resume__actions .btn { padding: .6rem .9rem; }
+  .resume__scroll { padding: .5rem; }
+  /* the one-page résumé is tiny on a phone: let it be panned/pinched at a readable width */
+  .resume__page { width: 190%; max-width: none; }
+}

@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="icon" type="image/x-icon" href="/favicon.ico" sizes="48x48" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Arnav Mehta | Developer & AI Engineer</title>
+    <meta name="description" content="Portfolio of Arnav Mehta — Full-Stack Developer & AI Engineer building intelligent platforms with React, Next.js, Node.js, FastAPI, and data analytics." />
+    <meta property="og:title" content="Arnav Mehta | Developer & AI Engineer" />
+    <meta property="og:description" content="Building real products with code, AI and interaction. BCA at GGSIPU, national hackathon finalist, full-stack and data engineer." />
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="Arnav Mehta" />
+    <meta property="og:image" content="/arnav-hero-photo.jpg" />
+    <meta property="og:image:width" content="1672" />
+    <meta property="og:image:height" content="941" />
+    <meta property="og:image:alt" content="Arnav Mehta" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:image" content="/arnav-hero-photo.jpg" />
+    <script type="application/ld+json">
+      {"@context":"https://schema.org","@type":"Person","name":"Arnav Mehta","jobTitle":"Full-stack developer and AI engineer","address":{"@type":"PostalAddress","addressLocality":"New Delhi","addressCountry":"IN"},"email":"mailto:arnavm.396@gmail.com","sameAs":["https://github.com/arnavvmehtaa718","https://www.linkedin.com/in/arnav-mehta-137583329/"]}
+    </script>
+    <meta name="theme-color" content="#0a0a0a" />
+    <link rel="preload" as="image" href="/arnav-hero-photo.jpg" fetchpriority="high" />
+    <style>
+      /* Static first frame of the hero, painted straight from HTML before any JS. The stacked (phone) layout keeps it
+           as the hero backdrop; the sideways desktop layout moves the node into its hero panel. */
+      body { margin: 0; background: #0a0a0a; }
+      .pre { position: absolute; top: 0; left: 0; width: 100%; height: 100vh; height: 100svh; overflow: hidden; }
+      .pre { background: #050505; }
+      .pre picture { position: absolute; inset: 0; display: block; }
+      .pre img { position: absolute; top: 0; right: 0; height: 100%; width: auto; max-width: none }
+      @media (max-width: 899px), (max-aspect-ratio: 1/1) { .pre img { left: 0; right: auto; top: 4.5rem; width: 100%; height: auto; } }
+      .pre i { position: absolute; inset: 0; background: linear-gradient(90deg, rgba(10,10,10,.85) 0%, rgba(10,10,10,.35) 55%, rgba(10,10,10,.1) 100%), linear-gradient(0deg, rgba(10,10,10,.9) 0%, transparent 45%); }
+      /* Static copy of the hero text in a system font, so the largest text paints before JS and can't shift when web fonts land.
+         App removes it the moment the live hero text is revealed. */
+      .pre .hero { position: absolute; inset: 0; z-index: 2; height: 100%; min-height: 0; }
+      .pre .hero__content { visibility: visible !important; }
+      .pre .hero__content, .pre .hero__content * { font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif !important; }
+      .pre .mask > span { transform: none; animation: none; }
+      /* a touch larger than the live text, so the live copy never registers as a later, larger LCP candidate */
+      .pre .hero__sub { font-size: calc(clamp(1.1rem, 1.6vw, 1.45rem) * 1.15); max-width: 32ch; }
+    </style>
+  </head>
+  <body>
+    <div class="pre" aria-hidden="true"><picture><source media="(max-width: 899px), (max-aspect-ratio: 1/1)" srcset="/arnav-hero-photo.jpg" /><img src="/arnav-hero-photo.jpg" alt="Arnav Mehta" width="1672" height="941" fetchpriority="high" /></picture><i></i><div class="hero"><div class="hero__content"><p class="eyebrow">&nbsp;</p><div class="hero__name"><span class="mask"><span>ARNAV</span></span><span class="mask"><span>MEHTA.</span></span></div><p class="hero__sub">I build real products at the point where <i>code</i>, <i>intelligence</i> and <i>interaction</i> meet.</p><div class="hero__cta"><span class="btn">View work</span><span class="btn btn--ghost">Résumé</span></div></div></div></div>
+    <div id="root"></div>
+    <script type="module" src="/src/main.jsx"></script>
+  </body>
+</html>

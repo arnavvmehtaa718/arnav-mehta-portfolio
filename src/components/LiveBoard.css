@@ -1,0 +1,94 @@
+/* "Live on the web": floating site cards joined by a thin drawn line, after the Selected Work board on curtisdesignr.me */
+.live { width: max-content; display: grid; grid-template-columns: auto 1fr; gap: 5vw; align-items: center; }
+/* sideways track: heading on the left, cards scattered at different heights across the panel */
+.live__head { width: min(30vw, 440px); display: grid; gap: 1rem; }
+.live__title { font-size: clamp(3rem, 7vw, 7.5rem); }
+.live__lede { max-width: 30ch; }
+
+.lboard { position: relative; display: flex; align-items: flex-start; gap: 5.5vw; height: 76vh; padding-right: 6vw; }
+.lboard__lines { position: absolute; inset: 0; width: 100%; height: 100%; overflow: visible; pointer-events: none; z-index: 0; }
+/* the graph line: an extruded ribbon (depth layer offset down-right), a bright sharp face, light flowing along it,
+   raised square nodes where it meets the cards and a pulse that travels the whole route */
+.lline { fill: none; stroke-linejoin: miter; stroke-linecap: square; vector-effect: non-scaling-stroke; }
+.lline--depth { stroke: rgba(198,255,61,.26); stroke-width: 7px; transform: translate(6px, 8px); opacity: 0; transition: opacity .8s .4s; }
+.lline--main { stroke: #c6ff3d; stroke-width: 3px; stroke-dasharray: 1; stroke-dashoffset: 1; transition: stroke-dashoffset 2.2s var(--ease); filter: drop-shadow(0 0 6px rgba(198,255,61,.55)); }
+.lline--flow { stroke: #f4ffd0; stroke-width: 3px; stroke-dasharray: 16 54; opacity: 0; animation: lflow 1.8s linear infinite; transition: opacity .6s 1.6s; }
+@keyframes lflow { to { stroke-dashoffset: -70; } }
+.lboard.in .lline--depth { opacity: 1; }
+.lboard.in .lline--main { stroke-dashoffset: 0; }
+.lboard.in .lline--flow { opacity: .85; }
+.lnode { opacity: 0; transform-box: fill-box; transform: scale(.4); transform-origin: center; transition: opacity .5s, transform .6s var(--ease); }
+.lboard.in .lnode { opacity: 1; transform: none; }
+.lnode__depth { fill: #3d5208; }
+.lnode__face { fill: #c6ff3d; stroke: #0a0a0a; stroke-width: 2px; vector-effect: non-scaling-stroke; }
+.lpulse { opacity: 0; transition: opacity .6s 1.8s; }
+.lboard.in .lpulse { opacity: 1; }
+.lpulse__halo { fill: rgba(198,255,61,.28); }
+.lpulse__dot { fill: #fff; }
+
+.lcard { position: relative; z-index: 1; opacity: 0; transform: translateY(46px); transition: opacity .9s var(--ease), transform 1.1s var(--ease); transition-delay: calc(var(--i) * 110ms); }
+.lboard.in .lcard { opacity: 1; transform: none; }
+/* staggered heights, after the scattered board in the reference */
+.lcard { flex: none; width: min(29vw, 66vh); }
+.lcard:nth-child(5n+1) { margin-top: 22vh; }
+.lcard:nth-child(5n+2) { margin-top: 0; }
+.lcard:nth-child(5n+3) { margin-top: 28vh; }
+.lcard:nth-child(5n+4) { margin-top: 5vh; }
+.lcard:nth-child(5n) { margin-top: 15vh; }
+
+.lcard__media {
+  position: relative;
+  display: block;
+  aspect-ratio: 2.2 / 1;
+  width: 100%;
+  overflow: hidden;
+  background: #090a0b;
+  isolation: isolate;
+  border-radius: 6px;
+  box-sizing: border-box;
+}
+.lcard__media img, .lcard__media video {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: fill;
+  object-position: center;
+  transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1), filter .6s;
+}
+.lcard__media:hover img, .lcard__media:hover video { transform: scale(1.05); }
+.lcard__media { box-shadow: 0 0 0 1px rgba(198,255,61,.35), 0 30px 60px -30px rgba(0,0,0,.9); }
+/* corner tick marks */
+.tick { position: absolute; z-index: 3; width: 9px; height: 9px; pointer-events: none; border: 0 solid var(--accent); }
+.tick.tl { top: 0; left: 0; border-top-width: 1.5px; border-left-width: 1.5px; }
+.tick.tr { top: 0; right: 0; border-top-width: 1.5px; border-right-width: 1.5px; }
+.tick.bl { bottom: 0; left: 0; border-bottom-width: 1.5px; border-left-width: 1.5px; }
+.tick.br { bottom: 0; right: 0; border-bottom-width: 1.5px; border-right-width: 1.5px; }
+.lcard__tag { position: absolute; left: 0; bottom: 0; z-index: 2; padding: .5rem .8rem; background: var(--bg); color: var(--accent); font: 500 .66rem var(--mono); letter-spacing: .14em; text-transform: uppercase; }
+
+.lcard__meta { display: flex; justify-content: space-between; align-items: baseline; gap: 1rem; margin-top: .9rem; }
+.lcard__meta h3 { font: 600 1.05rem var(--mono); letter-spacing: .04em; text-transform: uppercase; line-height: 1.25; }
+.lcard__visit { flex: none; font: 500 .7rem var(--mono); letter-spacing: .14em; text-transform: uppercase; color: var(--muted); padding: .4rem 0; transition: color .3s; }
+.lcard__visit:hover { color: var(--accent); }
+.lcard__visit span { display: inline-block; transition: transform .4s var(--ease); }
+.lcard__visit:hover span { transform: translate(2px, -2px); }
+.lcard__d { margin-top: .3rem; color: #d6d6d2; font-size: .95rem; line-height: 1.5; max-width: 38ch; }
+.lcard .note { margin-top: .5rem; }
+.lcard__cs { margin-top: .8rem; min-height: 32px; font: 500 .72rem var(--mono); letter-spacing: .1em; text-transform: uppercase; color: var(--fg); border-bottom: 1px solid var(--line); padding-bottom: 2px; transition: color .3s, border-color .3s; }
+.lcard__cs:hover { color: var(--accent); border-color: var(--accent); }
+
+/* stacked layout (phones, portrait tablets): one staggered column */
+@media (max-width: 899px), (max-aspect-ratio: 1/1) {
+  .live { display: block; width: 100%; }
+  .live__head { width: auto; margin-bottom: 2.6rem; }
+  .lboard { display: grid; grid-template-columns: 1fr; gap: 3.6rem; height: auto; padding: 0; }
+  .lcard:nth-child(n) { width: 86%; margin-top: 0; }
+  .lcard:nth-child(even) { margin-left: auto; }
+  /* the line runs behind the cards in a column: captions get the page colour so it never crosses text */
+  .lcard__meta, .lcard__d, .lcard .note, .lcard__cs { position: relative; background: var(--bg); }
+  .lcard__cs { display: block; width: fit-content; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .lcard { opacity: 1; transform: none; }
+  .lline--main { stroke-dashoffset: 0; }
+  .lline--flow, .lpulse { display: none; }
+}
