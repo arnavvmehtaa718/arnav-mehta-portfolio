@@ -67,6 +67,7 @@ export default function CaseStudy({ slug, onBack, onOpen }) {
           <h1>{p.summary}</h1>
           {p.note && <p className="note">{p.note}</p>}
           <div className="cs__links">
+            <a className="btn" href={p.demoUrl} target="_blank" rel="noreferrer">Live Demo</a>
             {p.live && <a className="btn" href={p.live} target="_blank" rel="noreferrer">Live site</a>}
             {p.github && <a className="btn btn--ghost" href={p.github} target="_blank" rel="noreferrer">GitHub</a>}
           </div>

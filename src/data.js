@@ -87,6 +87,7 @@ export const projects = [
     ],
     challenges: ['Coordinating user and organizer workflows with role-based access while keeping the UI responsive across devices.'],
     github: 'https://github.com/abhinav8377/event',
+    demoUrl: 'https://event-hub.in/',
   },
   {
     slug: 'saarthi-ai',
@@ -123,6 +124,7 @@ export const projects = [
     ],
     challenges: ['Making AI eligibility analysis accurate enough for real-world government scheme rules and document formats.'],
     github: 'https://github.com/arnavvmehtaa718/Saarthi-AI',
+    demoUrl: 'https://saarthi-ai-dev.vercel.app/',
   },
   {
     slug: 'atlas-travel-ai',
@@ -158,6 +160,7 @@ export const projects = [
     ],
     challenges: ['Building a reliable clustering algorithm that groups attractions by walkable proximity while respecting daily time constraints.'],
     github: 'https://github.com/arnavvmehtaa718/Atlas-Travel-AI',
+    demoUrl: 'https://atlas-travel-agent.vercel.app/',
   },
   {
     slug: 'oceaniq',
@@ -183,7 +186,7 @@ export const projects = [
       '/projects/oceaniq/oceaniq-2.png',
       '/projects/oceaniq/oceaniq-3.png',
     ],
-    summary: "OceanIQ is an AI-powered maritime decision-support platform optimizing bulk-cargo procurement and vessel chartering for shipments to India's east coast. Freight forecasting, charter timing, vessel selection, port analytics and route optimization in one workflow.",
+    summary: "OceanIQ is an AI-powered maritime platform optimizing bulk-cargo procurement, vessel chartering and route analytics.",
     tech: ['React', 'Next.js', 'TypeScript', 'Tailwind CSS', 'Python', 'Scikit-learn', 'Random Forest', 'Data Analytics'],
     role: 'Contributed to the backend AI pipeline and data visualization layers.',
     problem: 'Bulk-cargo procurement and chartering decisions were fragmented across spreadsheets and manual analysis.',
@@ -207,6 +210,7 @@ export const projects = [
     ],
     challenges: ['Aligning heterogeneous maritime data into a single forecasting and decision workflow.'],
     github: 'https://github.com/arnavvmehtaa718/OceanIQ',
+    demoUrl: 'https://nauniti.vercel.app/',
   },
   {
     slug: 'jarvis',
@@ -251,16 +255,17 @@ export const projects = [
     ],
     challenges: ['Serving the whole app from the Python stdlib while keeping the browser viewer self-contained and the API key server-side only.'],
     github: 'https://github.com/arnavvmehtaa718/JARVIS-AI',
+    demoUrl: 'https://jarvis-ai-k1vj.onrender.com/',
   },
 ]
 
 // Live sites shown as full-bleed screenshots in the "on the web" gallery.
 export const liveWork = [
-  { t: 'EventHub', d: 'Event discovery and ticketing platform', slug: 'eventhub', shot: '/projects/eventhub/eventhub-1.jpg', url: 'https://github.com/abhinav8377/event' },
-  { t: 'Saarthi AI', d: 'AI-powered government benefits navigator', slug: 'saarthi-ai', note: notes.saarthi, shot: '/projects/saarthi/saarthi-1.png', url: 'https://github.com/arnavvmehtaa718/Saarthi-AI' },
-  { t: 'Atlas Travel AI', d: 'Intelligent travel itinerary planner', slug: 'atlas-travel-ai', shot: '/projects/atlas/atlas-1.png', url: 'https://github.com/arnavvmehtaa718/Atlas-Travel-AI' },
-  { t: 'Jarvis', d: 'AI personal assistant', slug: 'jarvis', shot: '/projects/jarvis/jarvis-1.png', url: 'https://github.com/arnavvmehtaa718/JARVIS-AI' },
-  { t: 'OceanIQ', d: 'AI-Powered Maritime Procurement & Chartering Intelligence', slug: 'oceaniq', shot: '/projects/oceaniq/oceaniq-1.png', url: 'https://github.com/arnavvmehtaa718/OceanIQ' },
+  { t: 'EventHub', d: 'Event discovery and ticketing platform', slug: 'eventhub', shot: '/projects/eventhub/eventhub-1.jpg', url: 'https://github.com/abhinav8377/event', demoUrl: 'https://event-hub.in/' },
+  { t: 'Saarthi AI', d: 'AI-powered government benefits navigator', slug: 'saarthi-ai', note: notes.saarthi, shot: '/projects/saarthi/saarthi-1.png', url: 'https://github.com/arnavvmehtaa718/Saarthi-AI', demoUrl: 'https://saarthi-ai-dev.vercel.app/' },
+  { t: 'Atlas Travel AI', d: 'Intelligent travel itinerary planner', slug: 'atlas-travel-ai', shot: '/projects/atlas/atlas-1.png', url: 'https://github.com/arnavvmehtaa718/Atlas-Travel-AI', demoUrl: 'https://atlas-travel-agent.vercel.app/' },
+  { t: 'Jarvis', d: 'AI personal assistant', slug: 'jarvis', shot: '/projects/jarvis/jarvis-1.png', url: 'https://github.com/arnavvmehtaa718/JARVIS-AI', demoUrl: 'https://jarvis-ai-k1vj.onrender.com/' },
+  { t: 'OceanIQ', d: 'AI-Powered Maritime Procurement & Chartering Intelligence', slug: 'oceaniq', shot: '/projects/oceaniq/oceaniq-1.png', url: 'https://github.com/arnavvmehtaa718/OceanIQ', demoUrl: 'https://naunti.vercel.app/' },
 ]
 
 export const archive = [

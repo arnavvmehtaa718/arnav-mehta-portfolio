@@ -91,7 +91,7 @@ export default function LiveBoard({ items, onOpen }) {
       </svg>
       {items.map((w, i) => (
         <article key={w.t} ref={(el) => (cardRefs.current[i] = el)} className="lcard" style={{ '--i': i }}>
-          <a className="lcard__media" href={w.url} target="_blank" rel="noreferrer" aria-label={`${w.t}: open live site`}>
+          <a className="lcard__media" href={w.demoUrl || w.url} target="_blank" rel="noreferrer" aria-label={`${w.t}: open live site`}>
             <i className="tick tl" /><i className="tick tr" /><i className="tick bl" /><i className="tick br" />
             {w.loop ? (
               <AutoVideo src={w.loop} poster={w.shot} />
