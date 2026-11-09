@@ -661,16 +661,27 @@ export default function Home({ onOpen, returnTo, setLastSection }) {
               </div>
               <ol className="archive__list">
                 {shown.map((a, i) => {
-                  const row = (
-                    <>
-                      <b>{a.t}{a.note && <small className="note">{a.note}</small>}</b>
-                      <span className="archive__cat">{a.c}</span>
-                      <span className="tag">{a.s}</span>
-                    </>
-                  )
+                  const title = <b>{a.t}{a.note && <small className="note">{a.note}</small>}</b>
+                  const cat = <span className="archive__cat">{a.c}</span>
+                  const tag = <span className="tag">{a.s}</span>
                   return (
                     <li key={a.t} style={{ animationDelay: `${i * 35}ms` }}>
-                      {a.url ? <Ext href={a.url} className="archive__row">{row}<span className="arrow">↗</span></Ext> : <div className="archive__row">{row}<span /></div>}
+                      {a.url ? (
+                        a.demoUrl ? (
+                          <div className="archive__row archive__row--demo">
+                            <a className="archive__area" href={a.url} target="_blank" rel="noreferrer">{title}{cat}</a>
+                            <span className="archive__tagcell">
+                              {tag}
+                              <a className="archive__demo" href={a.demoUrl} target="_blank" rel="noreferrer">Live Demo</a>
+                            </span>
+                            <a className="archive__arrow" href={a.url} target="_blank" rel="noreferrer" aria-label={`${a.t} on GitHub`}><span className="arrow">↗</span></a>
+                          </div>
+                        ) : (
+                          <Ext href={a.url} className="archive__row">{title}{cat}{tag}<span className="arrow">↗</span></Ext>
+                        )
+                      ) : (
+                        <div className="archive__row">{title}{cat}{tag}<span /></div>
+                      )}
                     </li>
                   )
                 })}
@@ -736,7 +747,7 @@ export default function Home({ onOpen, returnTo, setLastSection }) {
                 <h2>How I got<br /><span className="it">here</span></h2>
                 <p className="muted">Academic foundation, internships, and hackathons.</p>
                 <div className="journey__flap" aria-hidden="true">
-                  <SplitFlapText words={['BCA', 'CISCO', 'ANALYTICS', 'AI SPACE', 'ISRO', 'SIH 2025', 'MCKINSEY', 'GROWTH']} padTo={9} fontSize={22} gap={3} tileRadius={4} tileColor="#161616" textColor="#c6ff3d" cycleDelay={2200} />
+                  <SplitFlapText words={['BCA', 'ANALYTICS', 'MERN', 'SIH 2026', 'CISCO', 'MCKINSEY', 'AI SPACE', 'ISRO', 'RBI90', 'GROWTH']} padTo={9} fontSize={22} gap={3} tileRadius={4} tileColor="#161616" textColor="#c6ff3d" cycleDelay={2200} />
                 </div>
               </div>
               <div ref={journeyRef} className="journey__stage">
@@ -799,7 +810,7 @@ export default function Home({ onOpen, returnTo, setLastSection }) {
                 </p>
                 <ul className="lab__list">
                   <li><Ext href="https://github.com/devranveer/Nexora">Nexora AI <span>React · FastAPI · PostgreSQL · Gemini AI ↗</span></Ext></li>
-                  <li><Ext href="https://github.com/arnavvmehtaa718/landing-page-2">Archer&Dune <span>Next.js, Three.js, and GSAP ↗</span></Ext></li>
+                  <li><Ext href="https://archerdune.vercel.app/">Archer&Dune <span>Next.js, Three.js, and GSAP ↗</span></Ext></li>
                 </ul>
               </div>
               <div className="lab__scene">

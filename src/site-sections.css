@@ -258,13 +258,24 @@ body:not(.ready) .hero__content { visibility: hidden; }
 .archive__list { max-height: 72vh; overflow: auto; scrollbar-width: none; }
 .archive__list li { animation: fadeUp .6s var(--ease) both; }
 .archive__list li + li { border-top: 1px solid var(--line); }
-.archive__row { display: grid; grid-template-columns: 1fr 9rem 7rem 1.5rem; align-items: center; gap: 1rem; padding: 1rem .4rem; border-radius: 10px; transition: padding .4s var(--ease), background .4s; }
+.archive__row { display: grid; grid-template-columns: minmax(0, 1fr) 9rem 14.5rem 1.5rem; align-items: center; gap: 1rem; padding: 1rem .4rem; border-radius: 10px; transition: padding .4s var(--ease), background .4s; }
 a.archive__row:hover { padding-left: 1.2rem; background: rgba(255,255,255,.04); }
 .archive__list b { font-weight: 500; font-size: clamp(1.05rem, 1.5vw, 1.4rem); letter-spacing: -0.02em; }
 .archive__cat { color: var(--muted); font-size: .85rem; }
 .arrow { color: #ffd23d; font-size: 1.15rem; font-weight: 700; transition: transform .3s ease; }
 a.archive__row:hover .arrow { transform: translate(3px, -3px); color: #ffe066; }
 .tag { justify-self: end; font-family: var(--mono); font-size: .66rem; letter-spacing: .08em; text-transform: uppercase; padding: .3rem .6rem; border-radius: 999px; box-shadow: inset 0 0 0 1px var(--line); }
+/* rows with a Live Demo pill: status + demo share one cell, everything stays on a single row */
+.archive__area { display: contents; }
+.archive__tagcell { display: inline-flex; align-items: center; justify-self: end; gap: .5rem; white-space: nowrap; }
+.archive__demo { font-family: var(--mono); font-size: .6rem; letter-spacing: .08em; text-transform: uppercase; padding: .3rem .6rem; border-radius: 999px; color: var(--fg); box-shadow: inset 0 0 0 1px var(--line); white-space: nowrap; transition: background .3s, color .3s; }
+.archive__demo:hover { background: var(--fg); color: #000; }
+.archive__arrow { display: inline-flex; align-items: center; justify-content: center; }
+.archive__row--demo:hover { padding-left: 1.2rem; background: rgba(255,255,255,.04); }
+.archive__row--demo:hover .arrow { transform: translate(3px, -3px); color: #ffe066; }
+@media (max-width: 899px), (max-aspect-ratio: 1/1) {
+  .archive__demo { font-size: .58rem; padding: .28rem .5rem; }
+}
 
 
 /* 07 skills */

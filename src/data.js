@@ -265,7 +265,7 @@ export const liveWork = [
   { t: 'Saarthi AI', d: 'AI-powered government benefits navigator', slug: 'saarthi-ai', note: notes.saarthi, shot: '/projects/saarthi/saarthi-1.png', url: 'https://github.com/arnavvmehtaa718/Saarthi-AI', demoUrl: 'https://saarthi-ai-dev.vercel.app/' },
   { t: 'Atlas Travel AI', d: 'Intelligent travel itinerary planner', slug: 'atlas-travel-ai', shot: '/projects/atlas/atlas-1.png', url: 'https://github.com/arnavvmehtaa718/Atlas-Travel-AI', demoUrl: 'https://atlas-travel-agent.vercel.app/' },
   { t: 'Jarvis', d: 'AI personal assistant', slug: 'jarvis', shot: '/projects/jarvis/jarvis-1.png', url: 'https://github.com/arnavvmehtaa718/JARVIS-AI', demoUrl: 'https://jarvis-ai-k1vj.onrender.com/' },
-  { t: 'OceanIQ', d: 'AI-Powered Maritime Procurement & Chartering Intelligence', slug: 'oceaniq', shot: '/projects/oceaniq/oceaniq-1.png', url: 'https://github.com/arnavvmehtaa718/OceanIQ', demoUrl: 'https://naunti.vercel.app/' },
+  { t: 'OceanIQ', d: 'AI-Powered Maritime Procurement & Chartering Intelligence', slug: 'oceaniq', shot: '/projects/oceaniq/oceaniq-1.png', url: 'https://github.com/arnavvmehtaa718/OceanIQ', demoUrl: 'https://nauniti.vercel.app/' },
 ]
 
 export const archive = [
@@ -280,18 +280,21 @@ export const archive = [
     c: 'Full Stack',
     s: 'Under development',
     url: 'https://github.com/arnavvmehtaa718/novacv',
+    demoUrl: 'https://novacv-marketing-website.vercel.app/',
   },
   {
     t: 'Nova-Ring, Built for Client',
     c: 'UI/UX Design',
     s: 'Under development',
     url: 'https://github.com/arnavvmehtaa718/nova-ring',
+    demoUrl: 'https://nova-ring-website.vercel.app/',
   },
   {
     t: 'Bitcoin Netinsights',
     c: 'Analytics',
     s: 'Live',
     url: 'https://github.com/arnavvmehtaa718/bitcoin-netinsights',
+    demoUrl: 'https://bitcoin-netinsights.vercel.app/',
   },
   {
     t: 'ISRO Hackathon AI Chatbot',
@@ -335,6 +338,27 @@ export const journey = [
     org: 'GGSIPU',
   },
   {
+    t: 'Data Analytics',
+    d: 'Selfreneur summer training. Advanced analysis on pricing, sales and regional datasets using Power BI, Tableau, DAX calculations, visual analytics and KPI dashboard engineering.',
+    tag: 'Analytics · Training',
+    logo: '/milestones/analytics.svg',
+    org: 'Selfreneur Analytics',
+  },
+  {
+    t: 'MERN Stack & DevOps Training',
+    d: 'Completed an 80-hour MERN Stack Training Programme, along with an additional 8-hour programme covering the Overview of DevOps with Docker.',
+    tag: 'Training · Grade A',
+    logo: '/milestones/mern.svg',
+    org: 'MERN · DevOps',
+  },
+  {
+    t: 'Smart India Hackathon',
+    d: 'Developed OceanIQ, a decision-intelligence platform for maritime procurement and chartering, featuring freight forecasting, vessel recommendations, route optimization, port analytics, cost analysis, and risk assessment.',
+    tag: 'Hackathon · SIH 2026',
+    logo: '/milestones/fastapi.svg',
+    org: 'Smart India Hackathon (SIH)',
+  },
+  {
     t: 'Cybersecurity',
     d: 'Cisco Networking Academy internship. Designed campus network topology, segmentation, attack-surface analysis, and secure hybrid-access architectures with VPN/SASE and Cisco Packet Tracer.',
     tag: 'Security · Internship',
@@ -342,11 +366,11 @@ export const journey = [
     org: 'Cisco Networking Academy',
   },
   {
-    t: 'Data Analytics',
-    d: 'Selfreneur summer training. Advanced analysis on pricing, sales and regional datasets using Power BI, Tableau, DAX calculations, visual analytics and KPI dashboard engineering.',
-    tag: 'Analytics · Training',
-    logo: '/milestones/analytics.svg',
-    org: 'Selfreneur Analytics',
+    t: 'Professional Development',
+    d: 'Selected participant in the McKinsey.org Forward Program, 2026. Intensive professional growth focusing on digital problem-solving, structured leadership, adaptability, and resilience.',
+    tag: 'Leadership · 2026',
+    logo: '/milestones/mckinsey.svg',
+    org: 'McKinsey & Company',
   },
   {
     t: 'Artificial Intelligence',
@@ -358,23 +382,16 @@ export const journey = [
   {
     t: 'ISRO Hackathon',
     d: 'Bharatiya Antariksh Hackathon 2025. Developed an AI-powered information-retrieval chatbot using LLMs, NLP, and dynamic knowledge graphs in an intensive 4-member team.',
-    tag: 'Hackathon · National Finalist',
+    tag: 'Hackathon · Participant',
     logo: '/milestones/isro.svg',
     org: 'ISRO',
   },
   {
-    t: 'Smart India Hackathon',
-    d: 'SIH 2025 – KMRL. Designed an AI-powered document automation system for OCR, multilingual processing, and knowledge extraction backed by a React + FastAPI + PostgreSQL pipeline.',
-    tag: 'Hackathon · SIH 2025',
-    logo: '/milestones/fastapi.svg',
-    org: 'KMRL / SIH',
-  },
-  {
-    t: 'Professional Development',
-    d: 'Selected participant in the McKinsey.org Forward Program, 2026. Intensive professional growth focusing on digital problem-solving, structured leadership, adaptability, and resilience.',
-    tag: 'Leadership · 2026',
-    logo: '/milestones/mckinsey.svg',
-    org: 'McKinsey & Company',
+    t: 'RBI90',
+    d: 'Participated in the Regional Level Round of RBI90Quiz 2024, representing Jagan Institute of Management Studies, New Delhi.',
+    tag: 'Quiz · Regional Level',
+    logo: '/milestones/rbi.svg',
+    org: 'Reserve Bank of India',
   },
   {
     t: 'Collaboration & Growth',
